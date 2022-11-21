@@ -68,3 +68,4 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 - Until a ticket system for support is created, please have your Tebex Transation ID ready 🙂.
 
 # Changelog
+- 1.0.0 - Initial Release
