@@ -19,7 +19,7 @@ Don's Shooting Range for Weapons Training on QBCore! This is a paid script, avai
 - Code is Escrowed but the questionare.lua is not so you can edit Freely!
 
 # Preview
-- *coming soon*
+- [don-shootingrange](https://www.youtube.com/watch?v=m_3dpB6DfNM)
 
 # Important Config
 ```
@@ -62,6 +62,8 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
     'WEAPON_REVOLVER',
 }
 ```
+# Images
+- Add the images here to \bcs_questionare\html\images
 
 # Support
 - Join my [discord](https://discord.gg/tVA58nbBuk) and use the relative support channels. 
