@@ -16,9 +16,10 @@ Don's Shooting Range for Weapons Training on QBCore! This is a paid script, avai
 - Leaderboards; Best Score (per person) for each Test, Time Leaderboards (Daily, Weekly, Monthly, All Time) and the Players best score for each test
 - Players can use the Range as many Times as they want, but they can only pass a License Test once
 - Set up your own Custom Games through the Menu, choosing the Weapon, Target Limit, and Target Display Time
+- Code is Escrowed but the questionare.lua is not so you can edit Freely!
 
 # Preview
-- 
+- *coming soon*
 
 # Important Config
 ```
