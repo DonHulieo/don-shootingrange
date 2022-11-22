@@ -9,14 +9,17 @@ Don's Shooting Range for Weapons Training on QBCore! This is a paid script, avai
 # Features
 - Optimised code, resmon of 0.0ms in rest, 0.2ms peak whilst displaying each target, 0.6ms if using DrawText instead of QB Target.
 - Fully Configurable Shooting Range Script
-- Change Target Limits, Target Display Times and Required Weapon or Add New Tests all from the Config File
-- Add as many Tests as you want and as many Locations
-- Set the Accuracy Required to pass a License Test
-- Players need to fill out a waiver form before they can use the range
-- Leaderboards; Best Score (per person) for each Test, Time Leaderboards (Daily, Weekly, Monthly, All Time) and the Players best score for each test
-- Players can use the Range as many Times as they want, but they can only pass a License Test once
+- Add as many Locations as you want, meaning you could use Gabz Ammunation or any suitable MLO.
+- Add as many Tests and whether they are Practice tests or License tests
+- Change Their Target Limits, Target Display Times and Required Weapon
+- Change the License to anything you want that makes sense, i.e. Weapons and Hunting
 - Set up your own Custom Games through the Menu, choosing the Weapon, Target Limit, and Target Display Time
-- Code is Escrowed but the questionare.lua is not so you can edit Freely!
+- Players need to fill out a Waiver form before they can use the range
+- Set the Accuracy Required to pass a License Test
+- When a Player passes the shooting part of a License Test, they must complete a Questionnaire to actually get a License
+- Leaderboards; Top 10 Best Scores (per person) for each Test, Time Leaderboards (Top 10 Daily, Top 10 Weekly, Top 10 Monthly and Top 10 All Time) and the Players best Scores for each test
+- Players can use the Range as many Times as they want, but they can only pass a License Test once
+- Code is Escrowed but the questionare.lua and config.lua is not so you can edit Freely!
 
 # Preview
 - [don-shootingrange](https://www.youtube.com/watch?v=m_3dpB6DfNM)
