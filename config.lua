@@ -8,6 +8,13 @@ Config.RequiresWaiver = true -- Set to true if you want to require a waiver to u
 Config.ScoreLimit = 0.85 -- Based on the amount of targets // Set to 0 if you want to disable the score limit // Set to 1 if you want to require a perfect hit percentage
 Config.ChangeClothes = true -- Set to true if you want the ped to put on protective gear on when starting a test
 
+Config.DiscordLogs = true -- Set to true if you want to log to discord // This requires the qb-log script located in qb-smallresources
+Config.LogSettings = {
+    webhook = "default", -- Set to your discord webhook // Set to "default" if you want to use the default webhook
+    title = "Shooting Range | License Granted", -- Set to the title you want to use for the logs
+    colour = "green", -- Set to the color you want to use for the logs // Defaults are default, blue, red, green, white, black, orange, yellow, pink and light green
+}
+
 Config.MainMenu = {
     mainHeader = "https://static.wikia.nocookie.net/gtawiki/images/a/aa/Ammunation-GTAV.png", -- Set to the header you want to use for the main menu
     secHeader = "Practice Sessions", -- Set to the header you want to use for the first submenu

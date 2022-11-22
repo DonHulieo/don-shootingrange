@@ -18,8 +18,11 @@ Don's Shooting Range for Weapons Training on QBCore! This is a paid script, avai
 - Set the Accuracy Required to pass a License Test
 - When a Player passes the shooting part of a License Test, they must complete a Questionnaire to actually get a License
 - Leaderboards; Top 10 Best Scores (per person) for each Test, Time Leaderboards (Top 10 Daily, Top 10 Weekly, Top 10 Monthly and Top 10 All Time) and the Players best Scores for each test
+- The Leaderboards are updated in real time, so if you get a new best score, it will show up on the Leaderboards instantly
+- The Timed Leaderboards are only for Practice Tests and License Tests, not Custom Games
 - Players can use the Range as many Times as they want, but they can only pass a License Test once
-- Code is Escrowed but the questionare.lua and config.lua is not so you can edit Freely!
+- Config Option to log Granted Licenses to Discord
+- Code is Escrowed but the questionare.lua, menu.lua and config.lua is not so you can edit Freely!
 
 # Preview
 - [don-shootingrange](https://www.youtube.com/watch?v=m_3dpB6DfNM)
@@ -73,5 +76,6 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 - Until a ticket system for support is created, please have your Tebex Transation ID ready 🙂.
 
 # Changelog
-- v1.0.1 - Unescrowed the menu and added Config option for Changing Clothes
+- v1.0.2 - Added Config Option to log Granted Licenses to Discord
+- v1.0.1 - Unescrowed the Menu and added a Clothes Config option
 - v1.0.0 - Initial Release
