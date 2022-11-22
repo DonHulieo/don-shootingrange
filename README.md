@@ -73,4 +73,5 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 - Until a ticket system for support is created, please have your Tebex Transation ID ready 🙂.
 
 # Changelog
-- 1.0.0 - Initial Release
+- v1.0.1 - Unescrowed the menu and added Config option for Changing Clothes
+- v1.0.0 - Initial Release
