@@ -5,7 +5,8 @@ Config.ShowBlips = true -- Set to true if you want to show blips on the map
 Config.UniqueNames = false -- Set to true if you want to use unique names for each blip
 Config.BlipName = "Shooting Range" -- Set to the name you want to use for the blips if not using unique names
 Config.RequiresWaiver = true -- Set to true if you want to require a waiver to use the range
-Config.ScoreLimit = 0 -- Based on the amount of targets // Set to 0 if you want to disable the score limit // Set to 1 if you want to require a perfect hit percentage
+Config.ScoreLimit = 0.85 -- Based on the amount of targets // Set to 0 if you want to disable the score limit // Set to 1 if you want to require a perfect hit percentage
+Config.ChangeClothes = true -- Set to true if you want the ped to put on protective gear on when starting a test
 
 Config.MainMenu = {
     mainHeader = "https://static.wikia.nocookie.net/gtawiki/images/a/aa/Ammunation-GTAV.png", -- Set to the header you want to use for the main menu
