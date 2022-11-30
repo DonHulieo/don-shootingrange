@@ -29,7 +29,7 @@ Don's Shooting Range for Weapons Training on QBCore! This is a paid script, avai
 
 # Important Config
 ```
-Config.UseTarget = true -- Use qb-target interactions (don't change this, go to your server.cfg and add setr UseTarget true) // Set to false if you are using DrawText3Ds
+Config.UseTarget = true -- Use qb-target interactions // Set to false if you are using DrawText3Ds
 Config.ShowBlips = true -- Set to true if you want to show blips on the map
 Config.UniqueNames = false -- Set to true if you want to use unique names for each blip
 Config.BlipName = "Shooting Range" -- Set to the name you want to use for the blips if not using unique names
@@ -76,6 +76,8 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 - Until a ticket system for support is created, please have your Tebex Transation ID ready 🙂.
 
 # Changelog
+- v1.0.4 - Added Locales for Notifications, DrawText and QB Target
+- v1.0.3 - Updated the Database check function
 - v1.0.2 - Added Config Option to log Granted Licenses to Discord
 - v1.0.1 - Unescrowed the Menu and added a Clothes Config option
 - v1.0.0 - Initial Release
