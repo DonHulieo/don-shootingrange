@@ -1,12 +1,15 @@
 # don-shootingrange
+
 Don's Shooting Range for Weapons Training on QBCore! This is a paid script, available on my [Tebex](https://dons-developments.tebex.io/package/5389397).
 
-# Dependencies
+## Dependencies
+
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 - [qb-menu](https://github.com/qbcore-framework/qb-menu)
 - [bcs_questionare](https://github.com/baguscodestudio/bcs_questionare)
 
-# Features
+## Features
+
 - Optimised code, resmon of 0.0ms in rest, 0.2ms peak whilst displaying each target, 0.6ms if using DrawText instead of QB Target.
 - Fully Configurable Shooting Range Script
 - Add as many Locations as you want, meaning you could use Gabz Ammunation or any suitable MLO.
@@ -24,11 +27,13 @@ Don's Shooting Range for Weapons Training on QBCore! This is a paid script, avai
 - Config Option to log Granted Licenses to Discord
 - Code is Escrowed but the questionare.lua, menu.lua and config.lua is not so you can edit Freely!
 
-# Preview
+## Preview
+
 - [don-shootingrange](https://www.youtube.com/watch?v=m_3dpB6DfNM)
 
-# Important Config
-```
+## Important Config
+
+```lua
 Config.UseTarget = true -- Use qb-target interactions // Set to false if you are using DrawText3Ds
 Config.ShowBlips = true -- Set to true if you want to show blips on the map
 Config.UniqueNames = false -- Set to true if you want to use unique names for each blip
@@ -68,14 +73,19 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
     'WEAPON_REVOLVER',
 }
 ```
-# Images
+
+## Images
+
 - Add the images here to \bcs_questionare\html\images
 
-# Support
-- Join my [discord](https://discord.gg/tVA58nbBuk) and use the relative support channels. 
-- Until a ticket system for support is created, please have your Tebex Transation ID ready 🙂.
+## Support
 
-# Changelog
+- Join my [discord](https://discord.gg/tVA58nbBuk) and use the relative support channels.
+- Open a ticket and please have your Tebex Transation ID ready 🙂.
+
+## Changelog
+
+- v1.0.5 - Linting
 - v1.0.4 - Added Locales for Notifications, DrawText and QB Target
 - v1.0.3 - Updated the Database check function
 - v1.0.2 - Added Config Option to log Granted Licenses to Discord
