@@ -85,6 +85,9 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 
 ## Changelog
 
+- v1.0.8 - Added French Locale and Fixed Bugs from New Update
+- v1.0.7 - Added Config Option for Clothes IDs
+- v1.0.6 - Fixed Database Error for Score being a nil value
 - v1.0.5 - Linting
 - v1.0.4 - Added Locales for Notifications, DrawText and QB Target
 - v1.0.3 - Updated the Database check function
