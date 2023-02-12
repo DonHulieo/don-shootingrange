@@ -1,11 +1,12 @@
 Config = {}
 
-Config.UseTarget = true -- Use qb-target interactions // Set to false if you are using DrawText3Ds
+Config.UseTarget = false -- Use qb-target interactions // Set to false if you are using DrawText3Ds
 Config.ShowBlips = true -- Set to true if you want to show blips on the map
 Config.UniqueNames = false -- Set to true if you want to use unique names for each blip
 Config.BlipName = "Shooting Range" -- Set to the name you want to use for the blips if not using unique names
 Config.RequiresWaiver = true -- Set to true if you want to require a waiver to use the range
 Config.LicenseTests = true -- Set to true if you the range to be used for licensing tests
+Config.MaxScore = 2 -- This is the max score a player can get per target 
 Config.ScoreLimit = 0.85 -- Based on the amount of targets // Set to 0 if you want to disable the score limit // Set to 1 if you want to require a perfect hit percentage
 Config.ChangeClothes = true -- Set to true if you want the ped to put on protective gear on when starting a test
 Config.ClothesIndexs = {
