@@ -85,6 +85,8 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 
 ## Changelog
 
+- v1.1.1 - Squashed a DrawText3Ds Bug
+- v1.1.0 - Changed How Scores are Calculated, Less Errors and more Engaging!
 - v1.0.9 - More Bug Fixes, Added Safeguards for Score or Hit Percent being a nil Value
 - v1.0.8 - Added French Locale and Fixed Bugs from New Update
 - v1.0.7 - Added Config Option for Clothes IDs
