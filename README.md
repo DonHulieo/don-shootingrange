@@ -78,6 +78,45 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 
 - Add the images here to \bcs_questionare\html\images
 
+## QB Anti Cheat Fix
+
+- Open qb-anticheat\server\main.lua
+- Find the following code:
+
+```lua
+QBCore.Functions.CreateCallback('qb-anticheat:server:HasWeaponInInventory', function(source, cb, WeaponInfo)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local PlayerInventory = Player.PlayerData.items
+    local retval = false
+
+    for k, v in pairs(PlayerInventory) do
+        if v.name == WeaponInfo["name"] then
+            retval = true
+        end
+    end
+    cb(retval)
+end)
+```
+
+- Replace it with the following code:
+
+```lua
+QBCore.Functions.CreateCallback('qb-anticheat:server:HasWeaponInInventory', function(source, cb, WeaponInfo)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local PlayerInventory = Player.PlayerData.items
+    local retval = not Player.Functions.GetMetaData('inShootingRange') and false or true
+
+    for k, v in pairs(PlayerInventory) do
+        if v.name == WeaponInfo["name"] then
+            retval = true
+        end
+    end
+    cb(retval)
+end)
+```
+
 ## Support
 
 - Join my [discord](https://discord.gg/tVA58nbBuk) and use the relative support channels.
@@ -85,8 +124,6 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
 
 ## Changelog
 
-- v1.1.1 - Squashed a DrawText3Ds Bug
-- v1.1.0 - Changed How Scores are Calculated, Less Errors and more Engaging!
 - v1.0.9 - More Bug Fixes, Added Safeguards for Score or Hit Percent being a nil Value
 - v1.0.8 - Added French Locale and Fixed Bugs from New Update
 - v1.0.7 - Added Config Option for Clothes IDs
