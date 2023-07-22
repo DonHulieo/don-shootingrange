@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'DonHulieo'
 description 'Don\'s Shooting Range for Weapons Training on QBCore'
-version '1.1.8'
+version '1.1.9'
 
 server_scripts {
 	'@oxmysql/lib/MySQL.lua',
