@@ -1,142 +1,103 @@
-Config = {}
-
-Config.UseTarget = false -- Use qb-target interactions // Set to false if you are using DrawText3Ds
-Config.ShowBlips = true -- Set to true if you want to show blips on the map
-Config.UniqueNames = false -- Set to true if you want to use unique names for each blip
-Config.BlipName = "Shooting Range" -- Set to the name you want to use for the blips if not using unique names
-Config.RequiresWaiver = true -- Set to true if you want to require a waiver to use the range
-Config.CheckRecord = true -- Set to true if you want to check the player's record before allowing them to do a license test
-Config.LicenseTests = true -- Set to true if you the range to be used for licensing tests
-Config.MaxScore = 2 -- This is the max score a player can get per target 
-Config.ScoreLimit = 0.85 -- Based on the amount of targets // Set to 0 if you want to disable the score limit // Set to 1 if you want to require a perfect hit percentage
-Config.ChangeClothes = true -- Set to true if you want the ped to put on protective gear on when starting a test
-Config.ClothesIndexs = {
-    male = {
-        dressed = {
-            earmuffs = {prop = 0, variation = 0}, -- Set to the indexs you want to use for the earmuffs
-            glasses = {prop = 25, variation = 0}, -- Set to the indexs you want to use for the glasses
-        },
-        undressed = {
-            earmuffs = {prop = 0, variation = 0}, -- Set to the indexs you want to use for the earmuffs
-            glasses = {prop = 25, variation = 0}, -- Set to the indexs you want to use for the glasses
-        }
+return {
+  ---@type boolean
+  ['DebugMode'] = false,
+  ---@type {enabled: boolean, Male: {prop: integer, texture: integer}[], Female: {prop: integer, texture: integer}[]}
+  ['Clothes'] = {
+    enabled = true,
+    ['Male'] = {
+      [0] = {prop = 0, texture = 0},
+      [1] = {prop = 15, texture = 1}
     },
-    female = {
-        dressed = {
-            earmuffs = {prop = 0, variation = 0}, -- Set to the indexs you want to use for the earmuffs
-            glasses = {prop = 25, variation = 0}, -- Set to the indexs you want to use for the glasses
-        },
-        undressed = {
-            earmuffs = {prop = 0, variation = 0}, -- Set to the indexs you want to use for the earmuffs
-            glasses = {prop = 25, variation = 0}, -- Set to the indexs you want to use for the glasses
-        }
+    ['Female'] = {
+      [0] = {prop = 0, texture = 0},
+      [1] = {prop = 25, texture = 0}
     }
-}
-
-Config.DiscordLogs = true -- Set to true if you want to log to discord // This requires the qb-log script located in qb-smallresources
-Config.LogSettings = {
-    webhook = "default", -- Set to your discord webhook // Set to "default" if you want to use the default webhook
-    title = "Shooting Range | License Granted", -- Set to the title you want to use for the logs
-    colour = "green", -- Set to the color you want to use for the logs // Defaults are default, blue, red, green, white, black, orange, yellow, pink and light green
-}
-
-Config.MainMenu = {
-    mainHeader = "https://static.wikia.nocookie.net/gtawiki/images/a/aa/Ammunation-GTAV.png", -- Set to the header you want to use for the main menu
-    secHeader = "Practice Sessions", -- Set to the header you want to use for the first submenu
-    secTxt = "Choose a practice session to start", -- Set to the text you want to use for the first submenu
-    secIcon = 'fas fa-clipboard-list', -- Set to the icon you want to use for the first submenu // https://fontawesome.com/v5.15/icons?d=gallery&p=2
-    thrHeader = "Licensing", -- Set to the header you want to use for the second submenu
-    thrTxt = "Complete your Weapons License training", -- Set to the text you want to use for the second submenu
-    thrIcon = 'fas fa-clipboard-check', -- Set to the icon you want to use for the second submenu
-    fouHeader = "Waiver", -- Set to the header you want to use for the third submenu
-    fouTxt = "Complete the waiver to access the range", -- Set to the text you want to use for the third submenu
-    fouIcon = 'fas fa-file-signature', -- Set to the icon you want to use for the third submenu
-    fifHeader = "Scoreboard", -- Set to the header you want to use for the fourth submenu
-    fifTxt = "View the leaderboards", -- Set to the text you want to use for the fourth submenu
-    fifIcon = 'fas fa-trophy', -- Set to the icon you want to use for the fourth submenu
-    sixHeader = "Custom Game", -- Set to the header you want to use for the fifth submenu and the custom game menu
-    sixTxt = "Create a custom game for yourself", -- Set to the text you want to use for the fifth submenu
-    sixIcon = 'fas fa-gamepad', -- Set to the icon you want to use for the fifth submenu
-}
-
-Config.ScoreboardMenu = {
-    secHeader = "Shooting Range", -- Set to the header you want to use for the shooting range leaderboard
-    secTxt = "View the leaderboards", -- Set to the text you want to use for the shooting range leaderboard
-    secIcon = 'fas fa-trophy', -- Set to the icon you want to use for the shooting range leaderboard
-    ranCustHeader = "Custom", -- Set to the header you want to use for the shooting range custom leaderboard
-    ranCustTxt = "View the custom leaderboards", -- Set to the text you want to use for the shooting range custom leaderboard
-    ranCustIcon = 'fas fa-trophy', -- Set to the icon you want to use for the shooting range custom leaderboard
-    thrHeader = "Leaderboards", -- Set to the header you want to use for the leaderboards
-    thrTxt = "View the timed leaderboards", -- Set to the text you want to use for the leaderboards
-    thrIcon = 'fas fa-stopwatch', -- Set to the icon you want to use for the leaderboards
-    leaFirsHeader = "Daily", -- Set to the header you want to use for the daily leaderboard
-    leaFirsTxt = "View the daily leaderboards", -- Set to the text you want to use for the daily leaderboard
-    leaFirsIcon = 'fas fa-stopwatch', -- Set to the icon you want to use for the daily leaderboard
-    leaSecHeader = "Weekly", -- Set to the header you want to use for the weekly leaderboard
-    leaSecTxt = "View the weekly leaderboards", -- Set to the text you want to use for the weekly leaderboard
-    leaSecIcon = 'fas fa-stopwatch', -- Set to the icon you want to use for the weekly leaderboard
-    leaThirHeader = "Monthly", -- Set to the header you want to use for the monthly leaderboard
-    leaThirTxt = "View the monthly leaderboards", -- Set to the text you want to use for the monthly leaderboard
-    leaThirIcon = 'fas fa-stopwatch', -- Set to the icon you want to use for the monthly leaderboard
-    fouHeader = "Hall of Fame", -- Set to the header you want to use for the third submenu
-    fouTxt = "View the hall of fame", -- Set to the text you want to use for the third submenu
-    fouIcon = 'fas fa-award', -- Set to the icon you want to use for the third submenu
-    hofFirHeader = "All Time Top 10", -- Set to the header you want to use for the top 10 hall of fame
-    hofFirTxt = "View the top 10 hall of fame", -- Set to the text you want to use for the top 10 hall of fame
-    hofFirIcon = 'fas fa-award', -- Set to the icon you want to use for the top 10 hall of fame
-    fifHeader = "My Scores", -- Set to the header you want to use for the fourth submenu
-    fifTxt = "View your scores", -- Set to the text you want to use for the fourth submenu
-    fifIcon = 'fas fa-user', -- Set to the icon you want to use for the fourth submenu
-}
-
-Config.CustomMatchMenu = {
-    secTxt = "Pick a weapon", -- Set to the text you want to use for the weapon selection menu
-    secIcon = 'fas fa-gamepad', -- Set to the icon you want to use for the weapon selection menu
-    wepIcon = 'fas fa-gun', -- Set to the icon you want to use for the weapon selection menu
-    thrTxt = "Pick a display time", -- Set to the text you want to use for the display time selection menu
-    timeIcon = 'fas fa-stopwatch', -- Set to the icon you want to use for the display time selection menu
-    fouTxt = "Pick a target count", -- Set to the text you want to use for the target count selection menu
-    tarIcon = 'fas fa-bullseye', -- Set to the icon you want to use for the target count selection menu
-}
-
-Config.ShootingRange = {
-    Easy = {
-        testName = 'Easy', -- Name of the test in the menu
-        icon = 'fas fa-bullseye', -- Fontawesome icon used in the menu // https://fontawesome.com/v5.15/icons?d=gallery&p=2
-        weapon = 'WEAPON_COMBATPISTOL', -- Weapons List: https://wiki.rage.mp/index.php?title=Weapons
-        displayTime = 500, -- Amount of time in milliseconds the player has to hit the target
-        targetLimit = 10, -- Amount of targets to shoot
-        practice = true, -- Set to true if the test does not count towards the license
+  },
+  ---@type {enabled: boolean, Male: {[string]: {dict: string, anim: string}, Female: {[string]: {dict: string, anim: string}}}}
+  ['Anims'] = {
+    enabled = true,
+    ['Male'] = {
+      ['1h'] = {dict = 'anim@deathmatch_intros@1hmale', anim = 'intro_male_1h_d_trevor'},
+      ['2h'] = {dict = 'anim@deathmatch_intros@2hmale', anim = 'intro_male_2h_b'},
+      ['exit'] = {dict = 'switch@franklin@chopshop', anim = 'checkshoe'}
     },
-    Medium = {
-        testName = 'Medium',
-        icon = 'fas fa-bullseye',
-        weapon = 'WEAPON_COMBATPISTOL',
-        displayTime = 250,
-        targetLimit = 25,
-        practice = true,
+    ['Female'] = {
+      ['1h'] = {dict = 'anim@deathmatch_intros@1hfemale', anim = 'intro_female_1h_a'},
+      ['2h'] = {dict = 'anim@deathmatch_intros@2hfemale', anim = 'intro_female_2h_a'},
+      ['exit'] = {dict = 'switch@franklin@chopshop', anim = 'checkshoe'}
+    }
+  },
+  ---@type {enabled: boolean, time: integer, colour: {count: {r: integer, g: integer, b: integer}, go: {r: integer, g: integer, b: integer}}}
+  ['Countdown'] = {
+    enabled = true,
+    time = 3,
+    colour = {
+      count = {r = 255, g = 51, b = 51},
+      go = {r = 0, g = 179, b = 60}
     },
-    Hard = {
-        testName = 'Hard',
-        icon = 'fas fa-bullseye',
-        weapon = 'WEAPON_COMBATPISTOL',
-        displayTime = 100,
-        targetLimit = 40,
-        practice = true,
+  },
+  ['Icons'] = {
+    ---@type {back: string, practice: string, scoreboard: string, customs: string, waiver: string, licensing: string}
+    ['Main'] = {
+      back = 'fa-solid fa-backward',
+      practice = 'fas fa-clipboard-list',
+      scoreboard = 'fas fa-trophy',
+      customs = 'fas fa-gamepad',
+      waiver = 'fas fa-file-signature',
+      licensing = 'fas fa-clipboard-check'
     },
-    License = {
-        testName = 'Weapon\'s License',
-        icon = 'fas fa-bullseye',
-        weapon = 'WEAPON_COMBATPISTOL',
-        displayTime = 150,
-        targetLimit = 20,
-        practice = false,
-        license = 'weapon', -- Set to the name of the license you want to give the player
+    ---@type {main: string, Customs: {weapon: string, time: string, limit: string}}
+    ['Tests'] = {
+      main = 'fas fa-bullseye',
+      ['Customs'] = {
+        weapon = 'fas fa-gun',
+        time = 'fas fa-stopwatch',
+        limit = 'fas fa-bullseye'
+      }
     },
-    -- Add as many as you want
-}
-
-Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pistols otherwise the animations will look weird
+    ---@type {range: string, timed: string, hall_of_fame: string, my_scores: string}
+    ['Scoreboard'] = {
+      range = 'fas fa-trophy',
+      timed = 'fas fa-stopwatch',
+      hall_of_fame = 'fas fa-award',
+      my_scores = 'fas fa-user'
+    }
+  },
+  ---@type {main: string, Targets: string[]}
+  ['Images'] = {
+    main = 'ammunation_logo',
+    ['Targets'] = {
+      'prop_range_target_01',
+      'prop_range_target_02',
+      'prop_range_target_03'
+    }
+  },
+  ---@type {weapon: string, time: integer, limit: integer, license: boolean|string}[]
+  ['Tests'] = {
+    {
+      weapon = 'WEAPON_COMBATPISTOL',
+      time = 1500,
+      limit = 10,
+      license = false
+    }, {
+      weapon = 'WEAPON_COMBATPISTOL',
+      time = 1000,
+      limit = 25,
+      license = false
+    }, {
+      weapon = 'WEAPON_COMBATPISTOL',
+      time = 750,
+      limit = 40,
+      license = false
+    }, {
+      weapon = 'WEAPON_COMBATPISTOL',
+      time = 500,
+      limit = 20,
+      license = 'weapon'
+    }
+  },
+  ---@type string[]
+  ['Weapons'] = {
     'WEAPON_COMBATPISTOL',
     'WEAPON_PISTOL',
     'WEAPON_PISTOL50',
@@ -145,126 +106,268 @@ Config.AllowedWeapons = { -- Allowed weapons for custom games // I'd stick to pi
     'WEAPON_VINTAGEPISTOL',
     'WEAPON_MARKSMANPISTOL',
     'WEAPON_REVOLVER',
-}
-
-Config.Locations = {
-    [1] = {
-        name = 'SELS Gun Range', -- Name of the location
-        coords = vector3(827.61, -2158.6, 29.62), -- Where the sign up is located
-        testCoords = vector3(821.477, -2163.663, 29.657), -- Where the player can start the test after signing up
-        testHeading = 180.00, -- Heading of where the player is for the test // Is also used for the qbtarget location
-        boxZoneLength = 0.5, -- The length of the zone where the player can start the test
-        boxZoneWidth = 1.2, -- The width of the zone where the player can start the test
-        boxzoneHeading = 270.0, -- The heading of the zone where the player can start the test
-        testBoxCoords = vector3(821.52, -2163.8, 29.62), -- Where the qbtarget box is located
-        testBoxLength = 0.6, -- Length of the qbtarget box
-        testBoxWidth = 4, -- Width of the qbtarget box
-        blip = { -- Blip settings
-            sprite = 313, -- Blip sprite
-            color = 1, -- Blip color
-            scale = 0.5, -- Blip scale
+    'WEAPON_MINISMG',
+    'WEAPON_DBSHOTGUN',
+    'WEAPON_COMBATSHOTGUN',
+    'WEAPON_COMBATMG',
+    'WEAPON_BULLPUPRIFLE'
+  },
+  ---@type {name: string, coords: vector4, blip: {enabled: boolean, sprite: integer, colour: integer, scale: number}, target: string, Ranges: {Types: {small: {length: number, width: number, heading: number, minZ: number, maxZ: number, tests: any}, large: {length: number, width: number, heading: number, minZ: number, maxZ: number, tests: any}}, Positions: {center: vector3, type: string, Targets: vector2[]}[]}}[]
+  ['Locations'] = {
+    {
+      name = 'Downtown',
+      coords = vector4(6.04, -1099.95, 29.8, 250.0),
+      blip = {
+        enabled = true,
+        sprite = 313,
+        colour = 1,
+        scale = 0.5,
+      },
+      target = `prop_range_target_01`,
+      ['Ranges'] = {
+        ['Types'] = {
+          small = {
+            length = 28.2,
+            width = 1.0,
+            heading = 340.0,
+            minZ = 28.8,
+            maxZ = 31.6,
+            tests = 1
+          },
+          large = {
+            length = 28.2,
+            width = 5.0,
+            heading = 340.0,
+            minZ = 28.8,
+            maxZ = 31.6,
+            tests = {'all', 2, 3, 4}
+          }
         },
-        targets = {
-            [1] = vector3(826.701, -2171.449, 29.45),
-            [2] = vector3(824.588, -2171.393, 29.45),
-            [3] = vector3(822.058, -2171.258, 29.45),
-            [4] = vector3(819.853, -2171.35, 29.45), 
-            [5] = vector3(817.223, -2171.293, 29.45),
-            [6] = vector3(816.428, -2180.542, 29.45), 
-            [7] = vector3(818.678, -2180.556, 29.45), 
-            [8] = vector3(821.051, -2180.49, 29.45), 
-            [9] = vector3(823.112, -2180.499, 29.45), 
-            [10] = vector3(825.06, -2180.514, 29.45), 
-            [11] = vector3(826.297, -2180.558, 29.45),
-            [12] = vector3(826.784, -2191.586, 29.45),
-            [13] = vector3(824.875, -2191.548, 29.45), 
-            [14] = vector3(823.196, -2191.56, 29.45), 
-            [15] = vector3(821.123, -2191.599, 29.45), 
-            [16] = vector3(819.525, -2191.561, 29.45), 
-            [17] = vector3(818.209, -2191.575, 29.45),
-            [18] = vector3(816.858, -2191.564, 29.45),
+        ['Positions'] = {
+          {
+            center = vector3(13.06, -1082.53, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(10.968101501465, -1088.18359375),
+              vector2(14.069986343384, -1079.6063232422),
+              vector2(17.824951171875, -1069.2772216797)
+            }
+          }, {
+            center = vector3(13.999693, -1082.87207, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(11.907794, -1088.525635),
+              vector2(15.009679, -1079.948364),
+              vector2(18.764645, -1069.619263)
+            }
+          }, {
+            center = vector3(14.939385, -1083.214111, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(12.847486, -1088.867676),
+              vector2(15.949371, -1080.290405),
+              vector2(19.704338, -1069.961304)
+            }
+          }, {
+            center = vector3(15.879078, -1083.556152, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(13.787178, -1089.209717),
+              vector2(16.889065, -1080.632446),
+              vector2(20.644032, -1070.303345)
+            }
+          }, {
+            center = vector3(18.228310, -1084.411255, 29.8),
+            type = 'large',
+            ['Targets'] = {
+              vector2(14.726871, -1089.551758),
+              vector2(17.828758, -1080.974487),
+              vector2(21.583725, -1070.645386),
+              vector2(15.666563, -1089.893799),
+              vector2(18.768452, -1081.316528),
+              vector2(22.523418, -1070.987427),
+              vector2(16.606256, -1090.235840),
+              vector2(19.708145, -1081.658569),
+              vector2(23.463112, -1071.329468),
+              vector2(17.545950, -1090.577881),
+              vector2(20.647839, -1082.000610),
+              vector2(24.402805, -1071.671509)
+            }
+          }, {
+            center = vector3(20.577541, -1085.266357, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(18.485641, -1090.919922),
+              vector2(21.587530, -1082.342651),
+              vector2(25.342497, -1072.013550)
+            }
+          }, {
+            center = vector3(21.517235, -1085.608398, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(19.425335, -1091.261963),
+              vector2(22.527224, -1082.684692),
+              vector2(26.282190, -1072.355591)
+            }
+          }, {
+            center = vector3(22.456928, -1085.950439, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(20.365028, -1091.604004),
+              vector2(23.466917, -1083.026733),
+              vector2(27.221884, -1072.697632)
+            }
+          }, {
+            center = vector3(23.396622, -1086.292480, 29.8),
+            type = 'small',
+            ['Targets'] = {
+              vector2(21.304722, -1091.946045),
+              vector2(24.406610, -1083.368774),
+              vector2(28.161577, -1073.039673)
+            }
+          }
+        }
+      }
+    }, {
+      name = 'SELS',
+      coords = vector4(827.61, -2158.6, 29.62, 270.0),
+      blip = {
+        enabled = true,
+        sprite = 313,
+        colour = 1,
+        scale = 0.5,
+      },
+      target = `prop_range_target_01`,
+      ['Ranges'] = {
+        ['Types'] = {
+          small = {
+            length = 28.2,
+            width = 1.0,
+            heading = 180.0,
+            minZ = 28.62,
+            maxZ = 31.42,
+            tests = 1
+          },
+          large = {
+            length = 28.2,
+            width = 5.0,
+            heading = 180.0,
+            minZ = 28.62,
+            maxZ = 31.42,
+            tests = {'all', 2, 3, 4}
+          }
         },
-        inUse = false, -- Do not touch this // This is used to check if the location is in use
-        user = nil, -- Do not touch this // This is used to check who is using the location
-    },
-    [2] = {
-        name = 'Downtown Gun Range', -- Name of the location
-        coords = vector3(6.04, -1099.95, 29.8), -- Where the sign up is located
-        testCoords = vector3(13.53, -1097.11, 29.83), -- Where the player will be teleported to when they start the test
-        testHeading = 340.0, -- Heading of where the player is for the test // Is also used for the qbtarget location
-        boxZoneLength = 0.5, -- The length of the zone where the player can start the test
-        boxZoneWidth = 1.2, -- The width of the zone where the player can start the test
-        boxzoneHeading = 250.0, -- The heading of the zone where the player can start the test
-        testBoxCoords = vector3(13.58, -1097.22, 29.8), -- Where the qbtarget box is located
-        testBoxLength = 0.6, -- Length of the qbtarget box
-        testBoxWidth = 4, -- Width of the qbtarget box
-        blip = { -- Blip settings
-            sprite = 313, -- Blip sprite
-            color = 1, -- Blip color
-            scale = 0.5, -- Blip scale
-        },
-        targets = {
-            [1] = vector3(20.45, -1091.55, 29.5530),
-            [2] = vector3(18.60, -1090.85, 29.5530),
-            [3] = vector3(16.75, -1090.15, 29.5530),
-            [4] = vector3(14.90, -1089.45, 29.5530),
-            [5] = vector3(13.05, -1088.75, 29.5530),
-            [6] = vector3(11.20, -1088.05, 29.5530),
-            [7] = vector3(23.45, -1082.95, 29.5530),
-            [8] = vector3(21.60, -1082.25, 29.5530),
-            [9] = vector3(19.75, -1081.55, 29.5530),
-            [10] = vector3(17.90, -1080.85, 29.5530),
-            [11] = vector3(16.05, -1080.15, 29.5530),
-            [12] = vector3(14.20, -1079.45, 29.5530),
-            [13] = vector3(27.25, -1072.55, 29.5530),
-            [14] = vector3(25.40, -1071.85, 29.5530),
-            [15] = vector3(23.55, -1071.15, 29.5530),
-            [16] = vector3(21.70, -1070.45, 29.5530),
-            [17] = vector3(19.75, -1070.00, 29.5530),
-            [18] = vector3(18.00, -1069.75, 29.5530),
-        },
-        inUse = false, -- Do not touch this // This is used to check if the location is in use
-        user = nil, -- Do not touch this // This is used to check who is using the location
-    },
-    --[[
-    [3] = {
-        name = 'My Other Range', -- Name of the location
-        coords = vector3(6.04, -1099.95, 29.8), -- Where the sign up is located
-        testCoords = vector3(13.53, -1097.11, 29.83), -- Where the player will be teleported to when they start the test
-        testHeading = 340.0, -- Heading of where the player is for the test // Is also used for the qbtarget location
-        boxZoneLength = 0.5, -- The length of the zone where the player can start the test
-        boxZoneWidth = 1.2, -- The width of the zone where the player can start the test
-        boxzoneHeading = 250.0, -- The heading of the zone where the player can start the test
-        testBoxCoords = vector3(13.58, -1097.22, 29.8), -- Where the qbtarget box is located
-        testBoxLength = 0.6, -- Length of the qbtarget box
-        testBoxWidth = 4, -- Width of the qbtarget box
-        blip = { -- Blip settings
-            sprite = 313, -- Blip sprite
-            color = 1, -- Blip color
-            scale = 0.5, -- Blip scale
-        },
-        targets = {
-            [1] = vector3(20.45, -1091.55, 29.5530),
-            [2] = vector3(18.60, -1090.85, 29.5530),
-            [3] = vector3(16.75, -1090.15, 29.5530),
-            [4] = vector3(14.90, -1089.45, 29.5530),
-            [5] = vector3(13.05, -1088.75, 29.5530),
-            [6] = vector3(11.20, -1088.05, 29.5530),
-            [7] = vector3(23.45, -1082.95, 29.5530),
-            [8] = vector3(21.60, -1082.25, 29.5530),
-            [9] = vector3(19.75, -1081.55, 29.5530),
-            [10] = vector3(17.90, -1080.85, 29.5530),
-            [11] = vector3(16.05, -1080.15, 29.5530),
-            [12] = vector3(14.20, -1079.45, 29.5530),
-            [13] = vector3(27.25, -1072.55, 29.5530),
-            [14] = vector3(25.40, -1071.85, 29.5530),
-            [15] = vector3(23.55, -1071.15, 29.5530),
-            [16] = vector3(21.70, -1070.45, 29.5530),
-            [17] = vector3(19.75, -1070.00, 29.5530),
-            [18] = vector3(18.00, -1069.75, 29.5530),
-        },
-        inUse = false, -- Do not touch this // This is used to check if the location is in use
-        user = nil, -- Do not touch this // This is used to check who is using the location 
-    }, ]]
-    -- Add more locations here
+        ['Positions'] = {
+          {
+            center = vector3(827.05, -2177.45, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(827.07507324219, -2171.3718261719),
+              vector2(827.08361816406, -2180.490234375),
+              vector2(827.08178710938, -2191.4755859375)
+            }
+          }, {
+            center = vector3(826.049988, -2177.449951, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(826.075073, -2171.371826),
+              vector2(826.083618, -2180.490234),
+              vector2(826.081787, -2191.475586)
+            }
+          }, {
+            center = vector3(825.049988, -2177.449951, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(825.075073, -2171.371826),
+              vector2(825.083618, -2180.490234),
+              vector2(825.081787, -2191.475586)
+            }
+          }, {
+            center = vector3(824.049988, -2177.449951, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(824.075073, -2171.371826),
+              vector2(824.083618, -2180.490234),
+              vector2(824.081787, -2191.475586)
+            }
+          }, {
+            center = vector3(821.549988, -2177.449951, 29.62),
+            type = 'large',
+            ['Targets'] = {
+              vector2(823.075073, -2171.371826),
+              vector2(823.083618, -2180.490234),
+              vector2(823.081787, -2191.475586),
+              vector2(822.075073, -2171.371826),
+              vector2(822.083618, -2180.490234),
+              vector2(822.081787, -2191.475586),
+              vector2(821.075073, -2171.371826),
+              vector2(821.083618, -2180.490234),
+              vector2(821.081787, -2191.475586),
+              vector2(820.075073, -2171.371826),
+              vector2(820.083618, -2180.490234),
+              vector2(820.081787, -2191.475586)
+            }
+          }, {
+            center = vector3(819.049988, -2177.449951, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(819.075073, -2171.371826),
+              vector2(819.083618, -2180.490234),
+              vector2(819.081787, -2191.475586)
+            }
+          }, {
+            center = vector3(818.049988, -2177.449951, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(818.075073, -2171.371826),
+              vector2(818.083618, -2180.490234),
+              vector2(818.081787, -2191.475586)
+            }
+          }, {
+            center = vector3(817.049988, -2177.449951, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(817.075073, -2171.371826),
+              vector2(817.083618, -2180.490234),
+              vector2(817.081787, -2191.475586)
+            }
+          }, {
+            center = vector3(816.049988, -2177.449951, 29.62),
+            type = 'small',
+            ['Targets'] = {
+              vector2(816.075073, -2171.371826),
+              vector2(816.083618, -2180.490234),
+              vector2(816.081787, -2191.475586)
+            }
+          }
+        }
+      }
+    }
+  },
+  ---@type fun(source: integer|string?, text: string, type: string, time: integer?)
+  ['Notify'] = function(source, text, type, time)
+    local src = source
+    local types = {['error'] = 'error', ['success'] = 'success', ['primary'] = 'primary'}
+    -- Use the above table to change notify types to suit your notification resource
+    local is_server = IsDuplicityVersion() == 1
+    if is_server and not src then return end
+    -- ServerSide Notification
+    if is_server then
+      -- local Player = duff.bridge.getplayer(src)
+      -- if not Player then return end
+      -- Player.showNotification(text)
+      TriggerClientEvent('QBCore:Notify', src, text, types[type] or 'primary', time)
+    else
+      -- ClientSide Notification
+      local Core = duff.bridge.getcore()
+      -- Core.ShowNotification(text, types[type] or 'primary', time)
+      Core.Functions.Notify(text, types[type] or 'primary', time)
+    end
+  end,
+  ---@type {enabled: boolean, distance: number, icon: string}
+  ['Target'] = {
+    enabled = true,
+    distance = 1.5,
+    icon = 'fas fa-gun'
+  }
 }
