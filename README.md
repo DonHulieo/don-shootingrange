@@ -473,6 +473,7 @@ end
 
 ### Changelog
 
+- v1.2.1 - Targets are now Spawned Server Side, Fixes for Object Rotations and dependency updates.
 - v1.2.0 - Rework script to use [duff](https://github.com/DonHulieo/duff) as a dependency and be framework agnostic.
 - v1.1.9 - Fixed Issue where countdown would finish but targets wouldn't spawn.
 - v1.1.8 - Changes to how Players Receive Ammo to prevent Exploits.
