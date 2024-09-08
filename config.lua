@@ -112,16 +112,28 @@ return {
     'WEAPON_COMBATMG',
     'WEAPON_BULLPUPRIFLE'
   },
-  ---@type {name: string, coords: vector4, blip: {enabled: boolean, sprite: integer, colour: integer, scale: number}, target: string, Ranges: {Types: {small: {length: number, width: number, heading: number, minZ: number, maxZ: number, tests: any}, large: {length: number, width: number, heading: number, minZ: number, maxZ: number, tests: any}}, Positions: {center: vector3, type: string, Targets: vector2[]}[]}}[]
+  ---@type {name: string, coords: vector4, blip: {enabled: boolean, options: blip_options}, target: string, Ranges: {Types: {small: {length: number, width: number, heading: number, minZ: number, maxZ: number, tests: any}, large: {length: number, width: number, heading: number, minZ: number, maxZ: number, tests: any}}, Positions: {center: vector3, type: string, Targets: vector2[]}[]}}[]
   ['Locations'] = {
     {
       name = 'Downtown',
       coords = vector4(6.04, -1099.95, 29.8, 250.0),
       blip = {
         enabled = true,
-        sprite = 313,
-        colour = 1,
-        scale = 0.5,
+        options = {
+          colours = {
+            opacity = 255,
+            primary = 1
+          },
+          display = {
+            category = 'activity',
+            display = 'all_select'
+          },
+          style = {
+            sprite = 313,
+            scale = 0.5,
+            short_range = true
+          }
+        }
       },
       target = `prop_range_target_01`,
       ['Ranges'] = {
@@ -233,9 +245,21 @@ return {
       coords = vector4(827.61, -2158.6, 29.62, 270.0),
       blip = {
         enabled = true,
-        sprite = 313,
-        colour = 1,
-        scale = 0.5,
+        options = {
+          colours = {
+            opacity = 255,
+            primary = 1
+          },
+          display = {
+            category = 'activity',
+            display = 'all_select'
+          },
+          style = {
+            sprite = 313,
+            scale = 0.5,
+            short_range = true
+          }
+        }
       },
       target = `prop_range_target_01`,
       ['Ranges'] = {

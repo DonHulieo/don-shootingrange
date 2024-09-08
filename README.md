@@ -65,6 +65,7 @@ Shooting Range System with Weapons Training and High Scores for FiveM! This is a
 
 - [oxmysql](https://github.com/overextended/oxmysql)
 - [duff](https://github.com/DonHulieo/duff)
+- [iblips](https://github.com/DonHulieo/iblips)
 
 **Depending on your Framework, Inventory and if you use a Targetting system, you will need to have installed either of the following dependencies:**
 
