@@ -1,3 +1,7 @@
+local duff = duff
+local locale = duff.locale
+local t = locale.t
+
 return {
   ---@type boolean
   ['DebugMode'] = false,
@@ -120,6 +124,7 @@ return {
       blip = {
         enabled = true,
         options = {
+          name = t('blip.label', {name = 'Downtown'}),
           colours = {
             opacity = 255,
             primary = 1
@@ -246,6 +251,7 @@ return {
       blip = {
         enabled = true,
         options = {
+          name = t('blip.label', {name = 'SELS'}),
           colours = {
             opacity = 255,
             primary = 1

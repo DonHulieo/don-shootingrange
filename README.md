@@ -281,9 +281,22 @@ Shooting Range System with Weapons Training and High Scores for FiveM! This is a
     coords = vector4(6.04, -1099.95, 29.8, 250.0),
     blip = {
       enabled = true,
-      sprite = 313,
-      colour = 1,
-      scale = 0.5,
+      options = {
+        name = t('blip.label', {name = 'Downtown'}),
+        colours = {
+          opacity = 255,
+          primary = 1
+        },
+        display = {
+          category = 'activity',
+          display = 'all_select'
+        },
+        style = {
+          sprite = 313,
+          scale = 0.5,
+          short_range = true
+        }
+      }
     },
     target = `prop_range_target_01`,
     ['Ranges'] = {
@@ -342,9 +355,7 @@ Shooting Range System with Weapons Training and High Scores for FiveM! This is a
 - `name` string, the name of the location.
 - `coords` vector4, the coordinates of the location.
 - `blip.enabled` boolean, whether to show a blip for the location.
-- `blip.sprite` integer, the sprite of the blip.
-- `blip.colour` integer, the colour of the blip.
-- `blip.scale` float, the scale of the blip.
+- `blip.options` blip_options, see [here](https://github.com/DonHulieo/iblips?tab=readme-ov-file#options) for more information.
 - `target` string, the target prop to use if none selected.
 - `[Ranges]['Types']` table, the types of ranges available.
   - `length` float, the length of the range.
@@ -474,25 +485,4 @@ end
 
 ### Changelog
 
-- v1.2.1 - Targets are now Spawned Server Side, Fixes for Object Rotations and dependency updates.
-- v1.2.0 - Rework script to use [duff](https://github.com/DonHulieo/duff) as a dependency and be framework agnostic.
-- v1.1.9 - Fixed Issue where countdown would finish but targets wouldn't spawn.
-- v1.1.8 - Changes to how Players Receive Ammo to prevent Exploits.
-- v1.1.7 - Fixed issue where players couldn't quit their current session.
-- v1.1.6 - Fixes for calculations around hit percent and score.
-- v1.1.5 - Changed how scores are saved and cleared between tests, creating a more stable and reliable system.
-- v1.1.4 - Fixed issue with QB Anticheat via metadata.
-- v1.1.3 - Various Updates to Linting and annotations.
-- v1.1.2 - Added Player Criminal Record Checks.
-- v1.1.1 - Squashed a DrawText3DS bug.
-- v1.1.0 - Changed How Scores are Calculated, Less Errors and more Engaging!
-- v1.0.9 - More Bug Fixes, Added Safeguards for Score or Hit Percent being a nil Value
-- v1.0.8 - Added French Locale and Fixed Bugs from New Update
-- v1.0.7 - Added Config Option for Clothes IDs
-- v1.0.6 - Fixed Database Error for Score being a nil value
-- v1.0.5 - Linting
-- v1.0.4 - Added Locales for Notifications, DrawText and QB Target
-- v1.0.3 - Updated the Database check function
-- v1.0.2 - Added Config Option to log Granted Licenses to Discord
-- v1.0.1 - Unescrowed the Menu and added a Clothes Config option
-- v1.0.0 - Initial Release
+- [Releases](https://github.com/DonHulieo/don-shootingrange/compare/v1.2.0...v1.2.3)
