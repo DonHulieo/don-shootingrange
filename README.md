@@ -485,4 +485,4 @@ end
 
 ### Changelog
 
-- [Releases](https://github.com/DonHulieo/don-shootingrange/compare/v1.2.0...v1.2.3)
+- [Releases](https://github.com/DonHulieo/don-shootingrange/compare/v1.2.0...v1.2.4)
