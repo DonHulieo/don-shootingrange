@@ -47,6 +47,8 @@ Shooting Range System with Weapons Training and High Scores for FiveM! This is a
       - [Server](#server)
         - [Answers](#answers)
         - [DiscordLogs](#discordlogs)
+        - [Fees](#fees)
+        - [Kick](#kick)
         - [Scoreboard](#scoreboard)
         - [Licensing](#licensing)
         - [Waiver](#waiver)
@@ -445,6 +447,38 @@ end
 - `colour` integer, the colour of the embed, you can find the colours [here](https://www.spycolor.com/).
 - `webhook` string, the webhook to send the logs to.
 
+##### Fees
+
+```lua
+['Fee'] = {
+  enabled = true,
+  cash = false,
+  ['Tests'] = {
+    [-1] = 1000,
+    2000,
+    3000,
+    4000,
+    5000
+  }
+}
+```
+
+- `enabled` boolean, whether to charge a fee to use the range.
+- `cash` boolean, whether to charge cash or not.
+- `[Tests]` integer[], the fees for each test. Where the index is the test ID (defined in [Tests](#tests)), or `-1` for custom games.
+
+##### Kick
+
+```lua
+['Kick'] = {
+  message = 'You have been kicked for leaving the range with a weapon.',
+  distance = 2.5
+}
+```
+
+- `message` string, the message to send to the player when they are kicked.
+- `distance` float, the distance the player has to be from the range to be kicked.
+
 ##### Scoreboard
 
 ```lua
@@ -485,4 +519,4 @@ end
 
 ### Changelog
 
-- [Releases](https://github.com/DonHulieo/don-shootingrange/compare/v1.2.0...v1.2.4)
+- [Releases](https://github.com/DonHulieo/don-shootingrange/compare/v1.2.0...v1.2.5)
