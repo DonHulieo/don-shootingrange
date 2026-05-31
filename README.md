@@ -1,6 +1,6 @@
 # don-shootingrange
 
-Shooting Range System with Weapons Training and High Scores for FiveM! This is a paid script, available on my [Tebex](https://dons-developments.tebex.io/package/5389397).
+Shooting Range System with Weapons Training and High Scores for FiveM! This is a paid script, available on my [Tebex](https://grouse-labs.tebex.io/package/5389397).
 
 ## Features
 
@@ -512,10 +512,6 @@ end
 
 - `Waiver` boolean, whether to require a waiver to use the range.
 
-### Support
-
-- Join my [discord](https://discord.gg/tVA58nbBuk) and use the relative support channels.
-- Open a ticket and please have your Tebex Transation ID ready 🙂.
 
 ### Changelog
 
